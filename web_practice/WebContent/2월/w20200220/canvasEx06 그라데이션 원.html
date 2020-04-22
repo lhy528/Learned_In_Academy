@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>그라데이션</title>
+        <script>
+            window.onload = function(){
+                var canvas = document.getElementById('c');
+                var ca = canvas.getContext('2d');
+                // x1, y1, r1, x2, y2, r2
+                var rgrad = ca.createRadialGradient(45, 45, 10, 62, 62, 80);
+                
+                rgrad.addColorStop(0, '#00d700');
+                rgrad.addColorStop(1, '#009700');
+
+                ca.fillStyle = rgrad;
+                ca.arc(80, 80, 80, 0, Math.PI*2, true);
+                ca.fill();
+
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="c" width="300" height="350"></canvas>
+    </body>
+</html>

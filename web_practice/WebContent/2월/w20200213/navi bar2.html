@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>네비바투</title>
+	<style type="text/css">
+		#wrapper{
+			width: 900px;
+			height: 40px;
+		}
+
+		ul.navi{
+			float: left;
+			width: 900px;
+			margin: 0;
+			padding: 0;
+			/*list-style-type: none;*/
+			background: #387B63;
+			border-radius: 10px;
+		}
+		ul.navi li{
+			display: inline;
+		}
+
+		ul.navi li a{
+			float: left;
+			font: bold 14px "고도 B";
+			line-height: 40px;
+			color: white;
+			text-decoration: none;
+			text-shadow: 1px 1px 1px #4C4C4C;
+			margin: 0;
+			padding: 0 30px;
+
+		}
+		/*현재 선택된 앵커의 스타일과 마우스가 올라왔을 때의 앵커 스타일*/
+		ul.navi .current a, ul.navi li:hover > a{
+			color: white;
+			text-decoration: none;
+			text-shadow: #4C4C4C;
+			background: black;
+			border-radius: 10px;
+		}
+
+		ul.navi ul{
+			display: none;
+		}
+		ul.navi li:hover > ul{
+			position: absolute;
+			display: block;
+			width: 860px;
+			height: 40px;
+			margin: 40px 0 0 0;
+			background: #64BB87;
+			border-radius: 10px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<ul class="navi">
+			<li><a href="#">HOME</a></li>
+			<li>
+				<a href="#">과정</a>
+				<ul>
+					<li><a href="#">DBMS</a></li>
+					<li><a href="#">JAVA</a></li>
+					<li><a href="#">HTML</a></li>
+					<li><a href="#">CSS</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">커뮤니티</a>
+				<ul>
+					<li><a href="#">공지사항</a></li>
+					<li><a href="#">Q&A</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">자유게시판</a></li>
+
+				</ul>
+			</li>
+			<li><a href="#">출석체크</a></li>
+
+		</ul>
+
+
+	</div>
+</body>
+</html>

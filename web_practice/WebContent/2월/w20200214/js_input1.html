@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+			
+		function prt() {
+			// id로 중복되지 않게 검색하여 텍스트필드에 사용자가 입력한 데이터를 가진 객체를 가져오기가져오기
+			var text = document.getElementById('txt1'); // 객체를 가져옴
+			// txt까지가 객체, 객체 안의 내용을 가져오고 싶으면 value를 추출
+			console.log(txt1.value);
+			txt.value = txt1.value;
+			txt1.value = "이렇게?";
+		}
+
+
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="txt1">
+	<input type="button" value="출력" id="txt" onclick="prt()">
+</body>
+</html>

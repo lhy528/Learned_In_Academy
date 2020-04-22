@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	
+
+	<script type="text/javascript">
+		function viewResult() {
+			var m1 = document.getElementById('m1');
+			var m2 = document.getElementById('m2');
+			var m3 = document.getElementById('m3');
+			var m4 = document.getElementById('m4');
+			var m5 = document.getElementById('m5');
+
+			console.dir(m1);
+
+			var img = document.getElementById('img')
+			var src = "";
+
+			// if(m1.checked){
+			// 	src = "../image/movie_image1.jpg";
+			// }else if(m2.checked){
+			// 	src = "../image/movie_image2.jpg";
+			// }else if(m3.checked){
+			// 	src = "../image/movie_image3.jpg";
+			// }else if(m4.checked){
+			// 	src = "../image/movie_image4.jpg";
+			// }else if(m5.checked){
+			// 	src = "../image/movie_image5.jpg";
+			// }
+			
+			// img.src = src;
+			// img.width = 500;
+
+
+			// id로 객체를 만들지 않고 문서의 path 로도 가능.
+			// form 이 가지고있는 데이터는 name에 들어있음. name = 변수?
+			// form name 안에 데이터들이 배열로 들어있음.
+			// console.log(document.frm.movie[0].checked);
+
+			for(var i = 0 ; i<5; i++){
+				if(document.frm.movie[i].checked){
+					src = "../image/movie_image"+i+".jpg";
+				}
+			}
+			// console.log(src);
+			img.src = src;
+
+		}
+
+	</script>
+
+</head>
+<body>
+	<h2>영화를 선택하세요</h2>
+	<form action="#" name="frm">
+		<input type="radio" name="movie" id="m1">정직한 후보.
+		<input type="radio" name="movie" id="m2">작은 아씨들
+		<input type="radio" name="movie" id="m3">클로젯
+		<input type="radio" name="movie" id="m4">기생충
+		<input type="radio" name="movie" id="m5">슈퍼소닉
+
+		<input type="button" value="결과보기" onclick="viewResult()">
+		<img src="" alt="" id="img">
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+		function prt() {
+			var n1 = parseInt(document.getElementById('txt1').value);
+			var n2 = parseInt(document.getElementById('txt2').value);
+			console.log(n1+n2);
+			sum = n1+n2;
+			txt3.value = sum;
+
+			// var n3 = document.getElementById("txt3");
+			// n3.value = sum;
+		}
+
+
+	</script>
+</head>
+<body>
+	<input type="text" name="txt1" id="txt1">
+	+
+	<input type="text" name="txt2" id="txt2">
+	<input type="button" value="=" onclick="prt()">
+	<input type="text" name="txt3" id="txt3">
+
+</body>
+</html>

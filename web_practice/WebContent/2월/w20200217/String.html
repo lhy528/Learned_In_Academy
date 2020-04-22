@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>문자열(ㄹㅇ 문자의 배열)</title>
+	<script type="text/javascript">
+		// 자바 : String str = new String("ABCDE");
+		// 		String str = "ABCDE" ; 둘 다 가능하다
+
+		var str1 = new String("Hello javascript World"); // 오브젝트
+
+		var str2 = "Hello javascript World"; // 스트링
+		
+		console.log(typeof(str1) + typeof(str2));
+
+		console.dir(str1);
+		console.log(str2.length);
+
+		// var check = prompt("아이디 입력해주세요", "8글자 이상");
+		// if(check.length<8){
+		// 	alert("8글자 이상이라구요");
+		// }else{
+		// 	alert("숫자공부좀 하셨군");
+		// }
+
+		var prt = "";
+		prt += "anchor : "+ str2.anchor("javascript")+ "<br>";
+		prt += "big : "+ str2.big() + "<br>";
+		prt += "blink : "+ str2.blink() + "<br>";
+		prt += "bold : "+ str2.bold() + "<br>";
+		prt += "fixed : "+ str2.fixed() + "<br>";
+		prt += "italics : "+ str2.italics() + "<br>";
+		prt += "fontcolor : "+ str2.fontcolor("red") + "<br>";
+		prt += "fontsize : "+ str2.fontsize(20) + "<br>";
+		prt += "small : "+ str2.small() + "<br>";
+		prt += "sub : "+ str2.sub() + "<br>";
+
+		document.write(prt);
+		// alert(prt.anchor());
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

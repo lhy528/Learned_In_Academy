@@ -1,0 +1,23 @@
++ 내부객체
+1. 요청 : request
+2. 응답 : response
+3. 출력 : out
+
++ 스크립틀릿 : <% %> || <%! %>
+   표현식 : <%= %> 
+   
++ JSP 우선순위
+  스크립틀릿 - 스크립트 - html
+  
++ DAO(Data Access Object)
+ : 데이터(DBMS)에 쉽게 접근하기 위한 객체
+ => 프로그램 개발 시 DB처리 로직을 위한 객체
+ 
++ VO(Value Object) : DB 레코드 1개의 데이터를 담을 수 있는 객체
+cf) DTO(Data Transfer Object) 객체 : 데이터 전달을 위한 객체
+ : Value Object
+ : DB의 레코드와 일치
+cf) Beans 객체
+
+++ CRUD
+(CREATE, READ, UPDATE, DELETE)

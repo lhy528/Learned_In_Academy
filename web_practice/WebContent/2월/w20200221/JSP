@@ -1,0 +1,62 @@
++ Tomcat
+  : JSP 코드 및 JAVA 코드를 해석하여 처리하고 브라우저로 출력
+
+ - browser : HTML, HTML5, javascript, XML, JSON등의 해석기가 설치되어있음
+
+ - HTML : 태그로 구성, 출력기능
+
+ - XML : 데이터 저장과 관련한 많은 기능을 가지고 있음
+
+ - HTML5
+
+ - javascript : 웹페이지상에서 클라이언트(브라우저)의 이벤트를 받음
+			ex) 키보드, 마우스 이벤트 처리
+ - CSS : 디자인 요소
+
++ 서버쪽 스크립트(JSP, PHP, ASP, .NET)
+  : 인터넷 브라우저가 읽어서 해석을 할 수가 없고, 서버에 설치된
+	서블릿 컨테이너 (WAS : Tomcat, Resin, JBoss, Webspere, Weblogic, ...)에서 실행
+
+  : HTML은 데이터를 처리, 저장, 검색하는 기능이 없고 단지 출력하는 기능만 있어서 데이터를 처리하려면 
+	DBMS(Oracle, DB2, Mysql, MSsql,...)가 필요함 -> 서버스크립트가 필요
+	
+  : JSP
+  	- SUN의 서버쪽 스크립트 기술
+  	- 모든 운영체제 지원
+  	- 자바 기반.
+  	- Servlet Container(WAS)를 설치해야 실행할 수 있음
+  	- 전자 정부 framework의 기반 기술
+  	
+ + JSP 스크립트 기본
+  - WEB 환경에서 JAVA를 이용한 DBMS 접근을 처리
+  - JAVA Logic 처리를 구현
+  - JSP 고유의 태그가 존재함
+  - JSP를 이요한 logic 결과를 HTML과 CSS, javascript를 통해 브라우저에 출력
+  
+1. 스크립틀릿(scriptlet) : <% ... 자바코드 명시 ... %>
+ - 일반적인 자바 코드가 쓰임
+ - 변수 선언을 비롯한 자바 문장 사용됨
+ 
+2. 선언문 : <%! ... 자바 메소드 ... %>
+
+3. 표현식(Expression) : <%= .... %>
+ - 단순 출력 기능
+ - 문장 종결자(;)를 사용할 수 없음
+ - 오로지 하나의 값만 출력할 수 있음
+ 
+cf) System.out.println(hap(10, 20));
+	<% out.println(hap(10, 20)); %>
+	<%= hap(10,20) %>
+
+4. 주석
+<%
+	// out.println(hap(10,20)); /* 이것도 됨 */ㄷ
+%>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 

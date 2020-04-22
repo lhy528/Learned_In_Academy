@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>라인 그리기</title>
+        <meta charset="UTF-8">
+        <style>
+            #c{width: 500px; height: 300px; border: 1px solid black;}
+        </style>
+        <script>
+            window.onload = function(){
+                var canvas = document.getElementById("c");
+
+                var ctx = canvas.getContext('2d');
+                // 경로 시작
+                ctx.beginPath();
+                // 시작점 이동
+                ctx.moveTo(50,50);
+                // 직선 이동
+                ctx.lineTo(80,80);
+
+                ctx.moveTo(140,80);
+                ctx.lineTo(170,50);
+
+                ctx.moveTo(50,120);
+                ctx.lineTo(180,120);
+                // 그려
+                ctx.stroke();
+                
+
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="c"></canvas>
+    </body>
+</html>

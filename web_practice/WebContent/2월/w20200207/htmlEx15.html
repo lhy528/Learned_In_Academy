@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>div의 마진 없애기 1</title>
+    <style media="screen">
+      #myDiv1{
+        width: 100px; height: 100px; padding: 50px; background-color: green;
+        /* position: absolute; */
+      }
+      #myDiv2{
+        width: 200px; height: 200px; padding: 50px; background-color: blue;
+        position: absolute;
+        left: 208px; top: 8px;
+        /* 가장 무식한 방법 - 절대치로 떄려넣기
+        기본 마진이 8px 있음 */
+      }
+
+      /* 마진 무시 -> 절대값으로 표현 */
+    </style>
+  </head>
+  <body>
+      <div id="myDiv1">
+        그린
+      </div>
+
+      <div id="myDiv2">
+        블루
+      </div>
+  </body>
+</html>

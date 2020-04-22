@@ -1,0 +1,13 @@
++ 게시판 만들기!!
+----------DB----------
+ BOARD Table
+게시글번호(pk), 제목, 내용, 작성자, 작성일, IP, status, 조회수
+
+bno - number(10)
+title - varchar2(30)
+writer - varchar2(20)
+contents - clob
+regdate - date
+ip - varchar2(16)
+status - number(2)
+hits - number(5)

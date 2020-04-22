@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<script type="text/javascript">
+		// 날짜 : Date
+
+		var now = new Date();
+
+		console.log(now);
+		console.dir(now);
+
+		var year1 = now.getYear(); // 1900년 기준, 120 출력
+		var year2 = now.getFullYear(); // Y2K 고려하여... 2020 출력
+		console.log(year2);
+
+		console.log(now.getFullYear() +"년 " +(now.getMonth()+1) + "월 " + now.getDate()+"일 " + now.getHours() + "시 " + now.getMinutes() + "분 " + now.getSeconds()+"초");
+
+		console.log("=================================")
+		var num1 = 217;
+		var num2 = new Number(217);
+		var num3 = 27.12387;
+
+		console.log(typeof(num1));
+		console.log(typeof(num2));
+		console.dir(num2);
+		console.log(num3.toFixed(1));
+		console.log(num3.toFixed(4)); // 고정 - 반올림
+
+		var num4 = Number.MAX_VALUE;
+		console.log(num4);
+		console.dir(Number);
+
+		console.log("================================");
+		console.log(Math); // 상수값으로 들어가있는 것들이라 ()가 필요 없다!
+		console.log("원주율 : " + Math.PI);
+		console.log("절대값 : " + Math.abs(-123));
+		console.log("제곱근 : " + Math.sqrt(25));
+		console.log("소수점 절삭 : " + Math.floor(3.14));
+		console.log("랜덤(0부터 1 사이) : " + Math.floor(Math.random()*100));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

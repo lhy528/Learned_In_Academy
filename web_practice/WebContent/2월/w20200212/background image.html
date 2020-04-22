@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>background image</title>
+	<style type="text/css">
+		div{
+			width: 400px;
+			height: 300px;
+		}
+
+		#bg1{
+			border: 1px solid black;
+			background: url(../images/bg.jpg) no-repeat;
+			background-size: 100% 100%;
+		}
+		#bg1{
+			border: 1px solid black;
+			background: url(../images/bg.jpg) no-repeat left;
+			background-size: cover;
+			/*background-size: contain; /* 공백 남음*/
+			/*cover : 사진의 짧은길이를 엘리먼트에 맞춤
+			  contain : 사진의 긴 길이를 엘리먼트에 맞춤 */
+		}
+	</style>
+</head>
+<body>
+	<p>
+		<img src="../images/bg.jpg" alt="background_image">
+	</p>
+
+	<div id="bg1"></div>
+	<div id="bg2"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>window</title>
+	<script type="text/javascript">
+		// alert("뭘 봐~~");	// 윈도우 안에있던 객체라 window. 이 생략이 가능했었음
+
+		// window.open(url, name, option, replace(새창));
+
+		// window.open("http://www.naver.com" , "네이버", "width=800 , height = 600", true);
+
+		var msg = window.open("", "", "width=800 , height=600" , true);
+
+		if(msg) {
+			msg.document.write("<h2>새 창입니다.</h2>");
+		}else{
+			alert("팝업 차단을 해제해주세요");
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

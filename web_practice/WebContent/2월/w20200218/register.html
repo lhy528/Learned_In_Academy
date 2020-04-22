@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>회원 가입</title>
+  <link href="register.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+    function rndPoster() {
+      var pstr = document.getElementById('poster');
+      var idx = Math.floor(Math.random()*10)+1;
+      console.log(pstr);
+      pstr.src = "../images/movie_image"+idx+".jpg";
+    setTimeout(rndPoster,1000);
+    }
+    function chk(x) {
+      var id = x.form[1].value;
+      var pw = x.form[2].value;
+      var pwchk = x.form[3].value;
+      var level = x.form[4].value;
+      var name = x.form[6].value;
+      var email = x.form[7].value;
+      var tel = x.form[8].value;
+      var skil = x.form[10].value;
+
+      if(id==""){
+        alert("아이디누락");
+        x.form[1].focus();
+        return;
+      }else if(pw==""){
+        alert("비밀번호 누락");
+        x.form[2].focus();
+        return;
+      }else if(pwchk==""){
+        alert("비밀번호확인 누락");
+        x.form[3].focus();
+        return;
+      }else if(level==""){
+        alert("등급 누락");
+        x.form[4].focus();
+        return;
+      }else if(name==""){
+        alert("이름 누락");
+        x.form[6].focus();
+        return;
+      }else if(email==""){
+        alert("이멜 누락");
+        x.form[7].focus();
+        return;
+      }else if(tel==""){
+        alert("연락처 누락");
+        x.form[8].focus();
+        return;
+      }
+      x.form.action = "10_1_로그인성공.html";
+      x.form.submit(); // 서밋이 있어야 됨
+    }
+
+    
+  </script>
+</head>
+
+<body onload="rndPoster()">
+  <form action="#">
+    <fieldset>
+      <legend>로그인 정보</legend>
+      <ol>
+        <li>
+          <label for="userid">아이디</label>
+          <input id="userid" name="userid" type="text" autofocus>
+        </li>
+        <li>
+          <label for="pwd1">비밀번호</label>
+          <input id="pwd1" name="pwd1" type="password" >
+        </li>
+        <li>
+          <label pwd="pwd2">비밀번호 확인</label>
+          <input id="pwd2" name="pwd2" type="password">
+        </li>  
+        <li>
+          <label pwd="level">회원 등급</label>
+          <input id="level" name="level" type="text" readonly value="샛별">
+        </li>
+      </ol>
+    </fieldset>
+    <fieldset>
+      <legend>개인 정보</legend>
+      <ol>
+        <li>
+          <label pwd="fullname">이름</label>
+          <input id="fullname" name="fullname" type="text" placeholder="5자미만 공백없이">
+        </li>
+        <li>
+          <label pwd="email">메일 주소</label>
+          <input id="email" name="email" type="email" placeholder="example@domain.com" autocomplete="off">
+        </li>
+        <li>
+          <label pwd="tel">연락처</label>
+          <input id="tel" name="tel" type="tel" autocomplete="off">
+        </li>  
+      </ol>
+    </fieldset>
+    <fieldset>
+      <legend>코딩 숙련도(상,중,하)</legend>
+      <ol>
+        <li>
+          <input id="skill" name="skill" type="range" min="1" max="3" step="1">
+        </li>  
+      </ol>
+    </fieldset>
+    <fieldset>
+      <button type="button" onclick="chk(this)"> 제출 </button> 
+    </fieldset>
+  </form>
+    <img src="" alt="영화포스타" id="poster">
+
+  </body>
+</html>

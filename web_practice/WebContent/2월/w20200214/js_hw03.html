@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		input{
+			position: relative;
+			float: left;
+			/*top: 700px; */
+		}
+	</style>
+	<script type="text/javascript">
+		function lulu() {
+			console.log(document.getElementById('img'))
+			document.getElementById('img').style.transform="scale(3,3)";
+			
+
+
+		}
+		function rev_Lulu() {
+			document.getElementById('img').style.transform="scale(0.3,0.3)";
+		}
+
+	</script>
+</head>
+<body>
+	<img src="../images/stop.jpg" id="img">
+	<input type="button" value="커져라~!" onclick="lulu()" id="btn1">
+	<input type="button" value="예쁘게~!" onclick="rev_Lulu()" id="btn2">
+</body>
+</html>
