@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD (Document Type Definition)
+
+DTD는 내부 혹은 외부 파일에서 정의 가능 -->
+
+<!-- 
+<!DOCTYPE 루트엘리먼트명[
+    <!ELEMENT 엘리먼트명 (속성명)>
+]>
+
+DTD 규칙을 잘 따르는 문서 : validate document 
+-->
+
+<!DOCTYPE students [
+    <!ELEMENT students (student)+>
+    <!ELEMENT student (name, age)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT age (#PCDATA)>
+]>
+
