@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace=" ">
+    <select id="selectAllEmp" resultType="vo.EmpVO">
+        select * from emp
+    </select>
+    
+    <select id="selectOneEmp" parameterType="int" resultType="vo.EmpVO">
+        select * from emp where empno = #{empno}
+    </select>
+
+    <insert id="insertOneEmp" parameterType="vo.EmpVO">
+        insert into emp
+        values (${empno}, "${ename}", "MANAGER", 0000, sysdate(), ${sal},3000, ${deptno})
+    </insert> 
+    
+    <update id="updateOneEmp" parameterType="vo.EmpVO">
+        update emp
+        set ename = #{ename}, sal = #{sal}
+        where empno = #{empno}
+    </update>
+    
+    <delete id="deleteOneEmp" parameterType="int">
+        delete from emp
+        where empno = #{empno} <!-- 사실 empno가 아니라 아무거나 써있어도 됨..? -->
+    </delete>
+</mapper>
