@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <style media="screen">
+            *{
+              margin : 0;
+            }
+            canvas{background-color: #aaaaaa};
+        </style>
+        <script>
+            var bgImg1 = new Image();
+            bgImg1.src = "../game/go.jpg";
+            var bgImg2 = new Image();
+            bgImg2.src = "../game/go.jpg";
+
+            var bg1X;
+            var bg2X;
+            var count = 0;
+
+            var rabbit1 = new Image();
+            rabbit1.src = "../game/rabbit1.png";
+
+            var rabbit2 = new Image();
+            rabbit2.src = "../game/rabbit2.png";
+
+            var rabbit3 = new Image();
+            rabbit3.src = "../game/rabbit3.png";
+
+            // 토끼 좌표를 변수 처리
+            var rabbitX = 100;
+            var rabbitY = 380;
+
+            var bg1X=0;
+            var bg2X=800;
+
+            window.onload = function(){
+                var canvas = document.getElementById('mycanvas');
+                ca = canvas.getContext('2d');
+                // body태그 객체 얻어오기
+                var body = document.body;
+                // body.onkeydown = 함수명;   => 키보드가 입력이 들어오면 함수를 실행
+                body.onkeydown = jumpRabbit;  //()를 빼고 함수이름만 선언해야함에 유의!
+
+                window.setInterval(drawScreen, 100);
+            }
+            function drawScreen() {
+                ca.drawImage(bgImg1, bg1X, 0, 800, 600);
+                ca.drawImage(bgImg2, bg2X, 0, 800, 600);
+                bg1X -= 15;
+                bg2X -= 15;
+
+                if(bg1X <= -800){
+                    bg1X = 800;
+                    bg2X = 0;
+                }
+                if(bg2X <= -800){
+                    bg2X = 800;
+                    bg1X = 0;
+                }
+
+                count++;
+                if(count%3==0){
+                    ca.drawImage(rabbit1, rabbitX, rabbitY, 80, 80);
+                }else if(count%3==1){
+                    ca.drawImage(rabbit2, rabbitX, rabbitY, 80, 80);
+                }else if (count%3==2) {
+                    ca.drawImage(rabbit3, rabbitX, rabbitY, 80, 80);
+                }else{
+                    count = 0;
+                }
+            }
+            function jumpRabbit(event) {
+                if(event.keyCode==32){
+                    upRabbit(0);
+                }                
+            }
+
+            function upRabbit(counter) {
+                if(counter < 20){
+                    setTimeout(function(){
+                    rabbitY -= 9;
+                    counter++;
+                    upRabbit(counter);                        
+                    }, 20);
+                }else if(counter = 20){
+                downRabbit(0);
+                }
+            }
+            
+            function downRabbit(counter) {
+                if(counter < 20){
+                    setTimeout(function(){
+                    rabbitY += 9;
+                    counter++;
+                    downRabbit(counter);                        
+                    }, 20);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="mycanvas" width=800 height=600></canvas>
+    <br>
+    </body>
+</html>

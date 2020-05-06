@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS 상속</title>
+    <style media="screen">
+    body {
+        /* 기본 폰트에 비율 적용 */
+        font-size: 120%
+    }
+
+    div {
+        border: 5px dotted black;
+        font-size: 0.8em;
+        /* em : 부모 크기를 기준으로 상대적으로 변하는 단위 */
+
+    }
+
+    #p1 {
+        font-size: 2em;
+    }
+    </style>
+</head>
+
+<body>
+    <h2>상속</h2>
+    <div class="">
+        <pre>
+          부모 요소에 적용한 스타일이 자식 요소에 연결되어 적용되는 것을
+          <!-- <html>                <head><body> -->
+          CSS에서의 상속이라고 한다
+        </pre>
+        <p>
+            CSS에서의 속성은 기본적으로 하위요소로 상속되는 속성과 상속되지 않는 속성으로 나뉨
+        </p>
+        <p id="p1">
+            border, margin, padding, float, position 등 상속되지 않음
+        </p>
+    </div>
+</body>
+
+</html>

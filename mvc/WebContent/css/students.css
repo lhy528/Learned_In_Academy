@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+students{
+	border: 1px solid black;
+}
+
+student{
+	font-size : 30px;
+	color : blue;
+}
+
+name{
+	background-color: green;
+	display: block;
+}
+
+age{
+	background-color: yellow;
+}

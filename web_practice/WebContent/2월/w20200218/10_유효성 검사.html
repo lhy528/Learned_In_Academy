@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>회원가입시 - 유효성 검사</title>
+	<script type="text/javascript">
+		function checkForm(x) { // form은 부모이지만 배열로 다시 가지고온다.
+			console.log(x);
+			console.dir(x);
+
+			var id = x.form[0].value;
+			var password = x.form[1].value;
+			var pwcheck = x.form[2].value;
+			var email = x.form[3].value;
+
+			// console.log("id : "+id);
+			// console.log("pw : "+password);
+			// console.log("pwchk : "+pwcheck);
+			// console.log("email : "+email);
+
+			if(id==""){ // 정규 표현식을 확인하자!!
+				alert("아이디가 필요합니다");
+				// 경고창 확인 후 아이디 텍스트 창으로 포커스 주기
+				x.form[0].focus();
+				return; // 값을 반환하고 중지해
+			}else if(password==""){
+				alert("이 사이트는 자동문이 아닙니다");
+				x.form[1].focus();
+				return;
+			}else if(pwcheck==""){
+				alert("성격이 급하시군요?");
+				x.form[2].focus();
+				return;
+			}else if(email==""){
+				alert("이메일 좀...");
+				x.form[3].focus();
+				return;
+			}else if(password!=pwcheck){
+				alert("패스워드 확인이 일치하지 않습니다.");
+				x.form[1].value = "";
+				x.form[2].value = "";
+				x.form[1].focus();
+				return;
+			}
+
+			// 데이터를 다른 페이지로 이동시킬 수 있어야됨 >> 폼태그의 액션
+			// if문 추가해서 사용자가 입력한 값에 따라 서로 다른 주소로 보낼 수도 있음
+			x.form.action = "10_1_로그인성공.html";
+
+			//전달방식도 선택 가능
+			x.form.method = "post";
+
+			// 가라!! 라는 명령어
+			x.form.submit();
+		}
+
+	</script>
+</head>
+<body>
+	<form action="#">
+		<table>
+			<tr>
+				<th>아이디</th>
+				<td><input type="text" name="userid" id="id"></td>
+			</tr>
+			<tr>
+				<th>패스워드</th>
+				<td><input type="text" name="userpw" id="pw"></td>
+			</tr>
+			<tr>
+				<th>패스워드 확인</th>
+				<td><input type="text" name="userpwchk" id="pwchk"></td>
+			</tr>
+			<tr>
+				<th>이메일</th>
+				<td><input type="text" name="useremail" id="email"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" value="전송" onclick="checkForm(this)">
+				</td>
+			</tr>
+		</table>
+
+
+
+	</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+		function prt() {
+			var text = document.getElementById('text');
+			console.log(text);
+			var h = document.getElementsByTagName('h1');
+			h[0].innerHTML+=text.value+"<br>";
+		}
+
+	</script>
+</head>
+<body>
+	버튼 클릭하면 textfield에 있는 글자를 가져다가 브라우저에 출력해 보세요
+	<input type="text" name="" id="text">
+	<input type="button" value="click" onclick="prt()">
+	<h1></h1>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- SQL문 작성 및 관리하는 곳 -->
+<!-- 
+    mapper 안에는 반드시 namespace가 있어야 하며
+    이름을 주고 싶지 않으면 공백 한 칸이라도 있어야 함 
+ -->
+<mapper namespace=" ">
+    <!-- mapper 안에 sql query문을 작성할 수 있음 -->
+    <!-- 세미콜론(;)은 찍지 않음 -->
+    <select id="selectAllDept" resultType="vo.DeptVO"><!-- root경로부터 시작 -->
+        select * from dept
+    </select>
+        
+    <!-- public DeptVO selectOneByDeptno(int deptno)를 대체하는 부분 -->
+    <select id="selectOneByDeptno" parameterType="int" resultType="vo.DeptVO">
+        select * from dept 
+        where deptno = #{deptno} <!-- resultType속성 > VO에 있는 deptno -->
+    </select>
+    
+
+    <insert id="insertOneDept" parameterType="vo.DeptVO">
+        insert into dept
+        values (#{deptno}, #{dname}, #{loc})
+    </insert>
+    
+    <update id="updateOneDept" parameterType="vo.DeptVO">
+        update dept
+        set dname = #{dname}, loc = #{loc}
+        where deptno = #{deptno}
+    </update>
+    
+    <delete id="deleteOneDept" parameterType="int">
+        delete from dept
+        where deptno = #{deptno}
+    </delete>
+    
+
+
+</mapper>

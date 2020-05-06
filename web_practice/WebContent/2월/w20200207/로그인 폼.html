@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>로그인 폼?</title>
+    <style media="screen">
+        div{margin-left: 700px;}
+
+      table, tr, td{border: 1px solid black;
+      border-collapse: collapse;
+    width: 300px; height: 50px;}
+
+    .div1{border: 1px solid black;
+      padding: 10px 30px 50px 80px;
+      /* 4개 쓰면 12시부터 시계방향으로, 2개 쓰면 상하와 좌우 같이드감 */
+      margin-left: inherit;
+      background-color: pink;
+      width: 100px; height: 100px}
+
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <!-- 액션 보낼거 없으니 #(샾)처리 -->
+        <div>
+            <table>
+                <tr>
+                    <td>ID</td>
+                    <td><input type="text" name="id" id=""></td>
+                </tr>
+                <tr>
+                    <td>PW</td>
+                    <td><input type="text" name="pw" id=""></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="로그인"></td>
+                    <td><input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br>
+        배경색을 핑크, 너비 100, 높이 100
+        <div class="div1">
+            핑쿠다 핑쿠
+        </div>
+    </form>
+</body>
+
+</html>

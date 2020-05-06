@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    A : emp table에 있는 정보를 담아서 보냄
+    
+    B : 브라우저에 사번이 가장 큰 숫자부터 3명 정보를 출력
+    
+    A : DTD 정의(사원번호, 사원이름, 급여, 입사일)
+ -->
+ 
+ <!DOCTYPE emps [
+    <!ELEMENT emps (emp)+>
+    <!ELEMENT emp (empno, ename, sal, hiredate)>
+    <!ELEMENT empno (#PCDATA)>
+    <!ELEMENT ename (#PCDATA)>
+    <!ELEMENT sal (#PCDATA)>
+    <!ELEMENT hiredate (#PCDATA)>
+]>
+
+<emps>
+	<emp>
+		<empno>7934</empno>
+		<ename>MILLER</ename>
+		<sal>1300</sal>
+		<hiredate>1982-01-23 00:00:00</hiredate>
+	</emp>
+	<emp>
+		<empno>7902</empno>
+		<ename>FORD</ename>
+		<sal>3000</sal>
+		<hiredate>1981-12-03 00:00:00</hiredate>
+	</emp>
+	<emp>
+		<empno>7900</empno>
+		<ename>JAMES</ename>
+		<sal>950</sal>
+		<hiredate>1981-12-03 00:00:00</hiredate>
+	</emp>
+</emps>
+
+<?xml-stylesheet type="text/css" href="../css/emp.css"?>

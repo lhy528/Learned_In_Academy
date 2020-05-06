@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <script>
+        var person1 = {}; // 객체 만들기
+        //객체에 변수가 없어도 알아서 생성해 줌
+        person1.name = "봉준호";
+        person1.age = 50;
+        person1.job = "영화감독";
+        person1.gender = "남성";
+        person1.name = "박찬욱";
+
+        //변수가 같으면 덮어쓰지만 오타나면 다른 속성으로 받아들임
+        console.log(person1);
+        console.log("-==================");
+
+        var person2 = {};
+        person2.name = "유관순";
+        person2.age = 17;
+        person2.job = "학생";
+        person2.gender= "여성";
+        console.log(person2);
+        console.log("====================")
+
+        //성인판별함수
+        function isAdult(obj) {
+            if(obj.age >= 20){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        console.log(isAdult(person2));
+        console.log(isAdult(person1));
+
+        var person3 = {
+            name : "홍길동",
+            // JSON은 세미콜론(;)이 아닌 콤마(,)로 연결함에 유의!!
+            age : 20,
+            job : "도적",
+            gender : "남성",
+            isAdult : function() {
+                var result;
+                if(this.age >=19){
+                    result = "성인";
+                }else{
+                    result = "미성년자";
+                }
+                console.log(this.name+" 님은 " + result + " 입니다.");
+            }
+        }
+
+        console.log(isAdult(person3));
+
+        person3.isAdult();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

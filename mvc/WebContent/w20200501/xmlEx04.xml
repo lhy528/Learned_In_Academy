@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE depts SYSTEM "xmlEx04.dtd">
+
+<depts>
+    <dept>
+        <deptno>10</deptno>
+        <dname>ACCOUNTION</dname> 
+        <loc>NEW YORK</loc>
+    </dept>
+    <dept>
+        <deptno>20</deptno>
+        <dname>RESEARCH</dname>
+        <loc>DALLAS</loc>
+    </dept>
+    <dept>
+        <deptno>30</deptno>
+        <dname>SALES</dname>
+        <loc>CHICAGO</loc>
+    </dept>
+</depts>

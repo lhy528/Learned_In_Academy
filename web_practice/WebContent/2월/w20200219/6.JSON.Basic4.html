@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>JSON</title>
+        <meta charset="UTF-8">
+        <script>
+            var students = []; // 대괄호 열고닫으면 배열! Array!
+            students.push({name : "권준호", java : 90, html:90, css:90});
+            students.push({name : "이승훈", java : 70, html:98, css:94});
+            students.push({name : "이창주", java : 50, html:70, css:60});
+            students.push({name : "임학영", java : 100, html:100, css:100});
+            students.push({name : "김진수", java : 70, html:99, css:80});
+            students.push({name : "박강현", java : 80, html:80, css:30});
+            students.push({name : "박채은", java : 90, html:70, css:20});
+            students.push({name : "양지현", java : 80, html:60, css:80});
+            students.push({name : "신한", java : 20, html:50, css:20});
+            students.push({name : "성창한", java : 30, html:40, css:30});
+            console.log(students);
+
+            // 자바 성적이 90점이 넘는 학생들만 추출(필터링)
+            var result = students.filter(function(student) {
+                return student.java >= 90;
+            })
+            console.log(result);
+            console.log("==========================")
+            // 전과목 평균 80점 이상 추출
+
+            // var result2 = students.filter(function(x) {
+            //     return (x.java+x.html+x.css)/3 >=80;
+            // })
+            var result2 = students.filter((subject) => subject.java >=90) // 람다식
+            console.log(result2);
+            var avg = students.filter((x) => 
+            (x.java + x.css + x.html)/3 >= 80 );
+            console.log(avg);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

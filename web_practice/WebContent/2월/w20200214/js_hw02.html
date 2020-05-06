@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		table{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+	</style>
+	<script type="text/javascript">
+		function prtGu() {
+			var num = parseInt(document.getElementById('num').value);
+			document.write("<table style = 'border : 1px solid black; border-collapse : none;'>")
+			for (var i = 1; i <= 9; i++) {
+				document.write("<tr>");
+				console.log(num+" * "+i+" = " + num*i); 
+				document.write("<td>"+num+"</td><td>*</td><td>"+i+"</td><td>=</td><td>"+num*i+"</td>");
+				document.write("</tr>");
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="num">
+	<input type="button" value="몇단 출력?" onclick="prtGu()">
+	브라우저 화면에 출력 - 테이블에 출력
+
+</body>
+</html>

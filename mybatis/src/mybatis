@@ -1,0 +1,19 @@
++ Mybatis
+
+ cf) 	library : 필요할 때 쓰려고 잘 모아놓은 것(도구)
+ 		 - 망치가 필요한데 없으면 도끼 뒷날로 작업...
+ 		 => 필요한 것을 가져다가 사용자가 알아서 활용해서 쓰는 방식
+ 
+ 		framework : 유기적 연관관계가 있는 것들을 모아놓은 것(다양한 부품의 모음)
+ 		 => 사용자가 각 부품들의 역할을 알 필요 없음
+ 		 => 정해져있는 규칙대로 사용하는 방식
+ 		 
+> mybatis framework
+ - DAO와 DBMS 사이에서 작업
+ - 대체로 변하지 않는 곳 : 영속 계층(persistence layer) -> persistence layer framework
+  => ORM framework
+ 
+ - JDBC를 대체하는 DB 연결만을 담당하는 프레임워크
+ - 국내 많은 프로젝트들이 XML을 이용해서 SQL문을 작성하는 형태로 별도의 DAO기능을 수행하는 것을 선호(DAO Class를 만들지 않는다)
+  => SQL 수정, 유지, 보수에 용이함
+ 

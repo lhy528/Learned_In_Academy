@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+	<meta charset="UTF-8">
+	<title>연습해봅시다</title>
+	<style type="text/css">
+		#top{
+			width: 98%;
+			height: 48px;
+			background-color: white;
+			padding: 20px 16px 0px 16px;
+		}
+		#css{
+			background-color: #4CAF50;
+		}
+		#css:hover{
+			background-color: #000000;
+		}
+
+		#topright{
+			font-family: "Segoe UI", Arial, "sans-serif";
+			float: right;
+			/*height: 40px;*/
+			font-size: 20px;
+			padding-top: 20px;
+		}
+
+		.logo{
+			font-family: "고도 M", "GODO M", "SEGOE UI", "nanum gothic", "고딕";
+			font-size: 37px;
+			text-decoration-style: solid;
+			text-decoration-line: none;
+			color: rgb(85,85,85);
+			font-weight: bold;
+		}
+		.logo:hover{
+			color: #4CAF50;
+			font-weight: bold;
+		}
+		.dotcom{
+			color: #4CAF50;
+		}
+
+		#menu{
+			width: 100%;
+			height: 44px;
+			background-color: #5f5f5f;
+		}
+
+		.allmenu{
+			text-align: center;
+			float: left;
+			text-decoration-style: none;
+			text-decoration-line: none;
+			color: white;
+			font-size: 17px;
+			padding: 10px 15px 9px;
+		}
+		.allrightmenu{
+			text-align: center;
+			float: right;
+			text-decoration-style: none;
+			text-decoration-line: none;
+			color: white;
+			font-size: 17px;
+			padding: 10px 15px 9px;
+		}
+		.allmenu:hover{
+			background-color: #000000;
+		}
+		.allrightmenu:hover{
+			background-color: #000000;
+		}
+
+		#leftmenuinner{
+			padding-top: 120px;
+			position: fixed;
+			top: 0;
+			padding-bottom: 0;
+			height: 100%;
+			width: 220px;
+			background-color: transparent;
+			display: block;
+		}
+		.leftinin{
+			height: 100%;
+			width: 100%;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			padding-top: 10px;
+		}
+		.leftmenu{
+			padding: 2px 1px 1px 16px;
+			width: 100%;
+			text-decoration-style: none;
+			text-decoration-line: none;
+			line-height: 22.5px;
+			display: block;
+			color: black;
+			/*background-color: #4CAF50;*/
+		}
+		.leftmenu:hover{
+			background-color: #CCCCCC;
+		}
+	</style>
+</head>
+<body>
+	<div id="top">
+		<a class="logo" href="//www.w3schools.com">
+			w3schools 
+			<span class="dotcom">.com</span>
+		</a>
+		
+		<div id="topright">T H E &nbsp&nbspW O R L D ' S &nbsp&nbspL A R G E S T &nbsp&nbspW E B &nbsp&nbspD E V E L O P E R  &nbsp&nbspS I T E</div>
+	</div>
+
+	<div id="menu">
+		<a href="" class="allmenu"><i class="fas fa-home"></i></a>
+		<a href="" class="allmenu">HTML</a>
+		<a href="" class="allmenu" id="css">CSS</a>
+		<a href="" class="allmenu">JAVASCRIPT</a>
+		<a href="" class="allmenu">SQL</a>
+		<a href="" class="allmenu">PYTHON</a>
+		<a href="" class="allmenu">PHP</a>
+		<a href="" class="allmenu">BOOTSTRAP</a>
+		<a href="" class="allmenu">MORE <i class="fa fa-caret-down"></i></a>
+
+		<a href="" class="allrightmenu"><i class="fas fa-search"></i></a>
+		<a href="" class="allrightmenu"><i class="fas fa-globe-asia"></i></a>
+		<a href="" class="allrightmenu"><i class="fas fa-adjust"></i></a>
+		<a href="" class="allrightmenu">EXERCISES<i class="fa fa-caret-down"></i></a>
+		<a href="" class="allrightmenu">REFERENCES<i class="fa fa-caret-down"></i></a>
+	</div>
+
+	<div id="leftmenuinner">
+		<div class="leftinin">
+			<h2>CSS Tutorial</h2>
+			<a href="" class="leftmenu" style="background-color: #4CAF50; color: white">CSS HOME</a>
+			<a href="" class="leftmenu">CSS Syntax</a>
+			<a href="" class="leftmenu">CSS Selectors</a>
+			<a href="" class="leftmenu">CSS How To</a>
+			<a href="" class="leftmenu">CSS Colors</a>
+			<a href="" class="leftmenu">CSS Backgrounds</a>
+			<a href="" class="leftmenu">CSS Borders</a>
+			<a href="" class="leftmenu">CSS Margins</a>
+			<a href="" class="leftmenu">CSS Padding</a>
+			<a href="" class="leftmenu">CSS Lists</a>
+			<a href="" class="leftmenu">CSS Tables</a>
+			<a href="" class="leftmenu">CSS Display</a>
+			<a href="" class="leftmenu">CSS Max-width</a>
+			<a href="" class="leftmenu">CSS Position</a>
+			<a href="" class="leftmenu">CSS Overflow</a>
+			<a href="" class="leftmenu">CSS Float</a>
+			<a href="" class="leftmenu">CSS Inline-block</a>
+			<a href="" class="leftmenu">CSS Align</a>
+			<a href="" class="leftmenu">CSS Combinators</a>
+			<a href="" class="leftmenu">CSS Pseudo-class</a>
+			<a href="" class="leftmenu">CSS Pseudo-element</a>
+			<a href="" class="leftmenu">CSS Opacity</a>
+			<a href="" class="leftmenu">CSS Navigation Bar</a>
+			<a href="" class="leftmenu">CSS Dropdowns</a>
+			<a href="" class="leftmenu">CSS Image Gallery</a>
+			<a href="" class="leftmenu">CSS Image Sprites</a>
+			<a href="" class="leftmenu">CSS Attr Selectors</a>
+			<a href="" class="leftmenu">CSS Forms</a>
+			<a href="" class="leftmenu">CSS Counters</a>
+			<a href="" class="leftmenu">CSS Website Layout</a>
+			<a href="" class="leftmenu">CSS Units</a>
+			<a href="" class="leftmenu">CSS Specificity</a>
+			<br>
+			<h2>CSS Tutorial</h2>
+			<a href="" class="leftmenu">CSS Advanced</a>
+			<a href="" class="leftmenu">CSS Rounded Corners</a>
+			<a href="" class="leftmenu">CSS a</a>
+			<a href="" class="leftmenu">CSS b</a>
+			<a href="" class="leftmenu">CSS c</a>
+			<a href="" class="leftmenu">CSS Ds</a>
+			<a href="" class="leftmenu">CSS Sadf</a>
+			<a href="" class="leftmenu">CSS Msahs</a>
+			<a href="" class="leftmenu">CSS Dbasding</a>
+			<a href="" class="leftmenu">CSS Lists</a>
+			<a href="" class="leftmenu">CSS Tables</a>
+			<a href="" class="leftmenu">CSS Display</a>
+			<a href="" class="leftmenu">CSS Max-width</a>
+			<a href="" class="leftmenu">CSS Position</a>
+			<a href="" class="leftmenu">CSS Overflow</a>
+			<a href="" class="leftmenu">CSS Float</a>
+			<a href="" class="leftmenu">CSS Inline-block</a>
+			<a href="" class="leftmenu">CSS Align</a>
+			<a href="" class="leftmenu">CSS Combinators</a>
+			<a href="" class="leftmenu">CSS Pseudo-class</a>
+			<a href="" class="leftmenu">CSS Pseudo-element</a>
+			<a href="" class="leftmenu">CSS Opacity</a>
+			<a href="" class="leftmenu">CSS Navigation Bar</a>
+			<a href="" class="leftmenu">CSS Dropdowns</a>
+			<a href="" class="leftmenu">CSS Image Gallery</a>
+			<a href="" class="leftmenu">CSS Image Sprites</a>
+			<a href="" class="leftmenu">CSS Attr Selectors</a>
+			<a href="" class="leftmenu">CSS Forms</a>
+			<a href="" class="leftmenu">CSS Counters</a>
+			<a href="" class="leftmenu">CSS Website Layout</a>
+			<a href="" class="leftmenu">CSS Units</a>
+			<a href="" class="leftmenu">CSS Specificity</a>
+		</div>
+	</div>
+
+</body>
+</html>

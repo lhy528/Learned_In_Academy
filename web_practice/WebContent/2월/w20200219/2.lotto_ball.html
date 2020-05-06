@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>로또 구현</title>
+    <style type = "text/css">
+        img{width: 130px;};
+    </style>
+
+    <script>
+        var num = new Array(45);
+        var lotto = new Array(6);
+        for (i = 0; i < num.length; i++) {
+            num[i]=i+1;            
+        }
+        
+        
+        function bigChance() {
+            for (let i = 0; i < 3000; i++) {
+                var ran = Math.floor(Math.random()*45);
+                var ran2 = Math.floor(Math.random()*45);
+                var temp = 0;
+                temp = num[ran];
+                num[ran] = num[ran2];
+                num[ran2] = temp;              
+            }
+            console.log(num);
+            for (let i = 0; i < lotto.length; i++) {
+                lotto[i] = num[i];
+            }
+            lotto.sort(function(a, b) { // 오름차순
+                return a - b;
+            });
+            this.img1.src = "../images/ball"+lotto[0]+".png";
+            this.img2.src = "../images/ball"+lotto[1]+".png";
+            this.img3.src = "../images/ball"+lotto[2]+".png";
+            this.img4.src = "../images/ball"+lotto[3]+".png";
+            this.img5.src = "../images/ball"+lotto[4]+".png";
+            this.img6.src = "../images/ball"+lotto[5]+".png";
+            
+        }
+    </script>
+</head>
+<body>
+	<img src="../images/q.jpg" alt="물음표" id="img1">
+    <img src="../images/q.jpg" alt="물음표" id="img2">
+    <img src="../images/q.jpg" alt="물음표" id="img3">
+    <img src="../images/q.jpg" alt="물음표" id="img4">
+    <img src="../images/q.jpg" alt="물음표" id="img5">
+    <img src="../images/q.jpg" alt="물음표" id="img6">
+    <input type="button" value="대박" id="btn" onclick="bigChance(this)">
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트 배열</title>
+
+	<script type="text/javascript">
+		var a = new Array(3); 	// 자바스크립트의 배열 선언
+		var a1 = new Array();	// 크기 미지정한 배열
+		var a2 = new Array(30, 12, 25, 1, 2, 8); // 값을 넣어서 선언
+		var a3 = [23, 12, 5, 19, 9, 33]; // 배열에 값을 넣어서 선언
+
+		console.log(a1);
+		console.log(a2);
+		console.log(a3);
+		a[0] = 1;
+		a[1] = 2;
+		a[2] = 3;
+		for (var i = 0; i < a.length; i++) {
+			console.log(a[i]);
+		}
+		console.log(a.reverse());
+
+		var b = new Array(2);
+		// a 배열에서 0번째, 1번째 값을 b 배열에 담기
+		// b[0] = a[0];
+		// b[1] = a[1];
+
+		// slice(n1, n2) : n1부터(이상) n2까지(미만) 분리
+		b = a.slice(0, 2);
+
+		console.log(a);
+		console.log(b); // 주소값을 바라보지만 브라우저에서 알아서 값들을 보여줌
+
+		console.log(b.concat(a)); // append형태로 붙이게 됨(b 뒤에 a를 붙임)
+		console.log(b);
+
+		
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

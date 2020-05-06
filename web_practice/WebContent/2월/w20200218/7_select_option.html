@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		function printWhere() {
+			console.log(document.frm.where); // path로 찾아가려면 name 으로 찾아감
+			var idx = document.frm.where.selectedIndex;
+			// option은 번호(index)로 return해줍니다!!
+			console.log(idx);
+			if(idx==1){
+				location.href = "http://www.burgerking.co.kr";
+			}else if(idx==2){
+				location.href = "http://www.mcdonalds.co.kr";
+			}else if(idx==3){
+				location.href = "http://www.lotteria.com";
+			}else if(idx==4){
+				location.href = "http://www.istarbucks.co.kr";
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<h1>점심 뭐먹지</h1>
+	<form action="#" name="frm">
+
+		<select name="where" id="" onchange="printWhere()">
+			<option value="------">------</option>
+			<option value="버거킹">버거킹</option>
+			<option value="맥도날드">맥도날드</option>
+			<option value="롯데리아">롯데리아</option>
+			<option value="스타벅스">스타벅스</option>
+		</select>
+		
+	</form>
+</body>
+</html>
