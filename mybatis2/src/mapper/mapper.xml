@@ -14,7 +14,7 @@
 
     <insert id="insertOneEmp" parameterType="vo.EmpVO">
         insert into emp
-        values (${empno}, "${ename}", "MANAGER", 0000, sysdate(), ${sal},3000, ${deptno})
+        values (#{empno}, "#{ename}", "MANAGER", 0000, sysdate(), #{sal},3000, #{deptno})
     </insert> 
     
     <update id="updateOneEmp" parameterType="vo.EmpVO">
