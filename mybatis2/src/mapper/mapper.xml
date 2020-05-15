@@ -26,5 +26,6 @@
     <delete id="deleteOneEmp" parameterType="int">
         delete from emp
         where empno = #{empno} <!-- 사실 empno가 아니라 아무거나 써있어도 됨..? -->
+<!-- github에서 작성해봤음-->
     </delete>
 </mapper>
