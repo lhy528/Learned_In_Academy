@@ -23,7 +23,7 @@ public class TestMain {
 		Beverage bvrg3 = (Beverage)factory.getBean("b");
 		Beverage bvrg4 = (Beverage)factory.getBean("b");
 		System.out.println(bvrg3);
-		System.out.println(bvrg4); // 싱글톤 패턴으로 생성되는 것을 알 수 있다(주소가 같음)
+		System.out.println(bvrg4); // bean 관리를 기본적으로 싱글톤 패턴으로 생성하는 것을 알 수 있다(주소가 같음)
 		System.out.println("=======================================");
 		
 		// DI(Dependency Injection) : 의존성 주입, 여기선 생성자 parameter 입력하려고 함
