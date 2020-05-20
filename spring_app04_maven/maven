@@ -1,0 +1,3 @@
++ maven : 빌드툴(build tool) + 오픈소스버전관리
+  프로젝트 우클릭 - configure - convert to maven project
+  mavenrepository에서 spring context 복사해와서 pom.xml에 dependencies 만들고 내용 복붙 

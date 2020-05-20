@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <!-- StunGun sg = new Stungun(); -->
+    <bean id="sg" class="spring_app05_maven.StunGun"></bean>
+    
+    <!-- Police p = new Police(sg, 150); -->
+    <bean id="p" class="spring_app05_maven.Police">
+        <constructor-arg index="0" ref="sg"></constructor-arg>
+        <constructor-arg index="1" value="150"></constructor-arg>
+        
+        <!-- 생성자 overloading이 없고 getter/setter만 있다면 -->
+        <property name="w" ref="sg"></property>
+        <property name="hp" value="150"></property>
+        
+    </bean>
+    
+    <bean id="sr" class="spring_app05_maven.SniperGun"></bean>
+    
+    <bean id="sniper" class="spring_app05_maven.Sniper">
+        <constructor-arg ref="sr"></constructor-arg>
+        <constructor-arg value="98"></constructor-arg>
+        
+<!--         <property name="w" ref="sr"></property>
+        <property name="hp" value="150"></property> -->
+        
+    </bean>
+    
+    
+    
+</beans>
