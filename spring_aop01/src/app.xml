@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="hijack" class="spring_aop01.HijackAdvice">
+    	
+    </bean>
+
+    <bean id="biz" class="spring_aop01.CustomerServiceImple">
+        <property name="name" value="홍길동" />
+        <property name="email" value="hong@gmail.com" />
+    </bean>
+
+    <bean id="execute" class="org.springframework.aop.framework.ProxyFactoryBean">
+    	<!-- 대행자(proxy)에게 biz를 타겟으로 지정해줘야 함(setter 이용) -->
+        <property name="target" ref="biz" />
+        
+        <!-- aspect(측면)에서 끼워넣을 작업(advice)를 지정해줘야 함 -->
+        <property name="interceptorNames">
+	       <value>hijack</value> <!-- 위에서 bean으로 만들어놓은 HijackAdvice -->
+        </property>
+    </bean>
+    
+</beans>
