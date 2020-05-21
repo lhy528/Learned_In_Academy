@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="interceptor" class="spring_aop04_after_throw_advice.InterceptorAdvice"></bean>
+    <bean id="biz" class="spring_aop04_after_throw_advice.MessageImple">
+	   <property name="msg" value="점심 뭐먹누!!!!!!"></property>
+    </bean>
+    <bean id="proxyBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="biz"></property>
+        <property name="interceptorNames" value="interceptor"></property>
+    </bean>
+
+</beans>
