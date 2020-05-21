@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<bean id="interceptor_before" class="advice.BeforeInterceptorAdvice"></bean>
+<bean id="interceptor_after" class="advice.MethodAfter_Advice"></bean>
+
+<bean id="biz" class="spring_aop03_before_hw.Withdraw" p:lastmoney="1000000" p:owner="반장님"></bean>
+
+
+
+<bean id="proxyBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="target" ref="biz" />
+	<property name="interceptorNames">
+        <list>
+            <value>interceptor_before</value>
+            <value>interceptor_after</value>
+        </list>
+    </property>
+</bean>
+
+</beans>

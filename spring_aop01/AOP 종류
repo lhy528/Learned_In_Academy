@@ -1,0 +1,1 @@
+AOP 종류 : before / after-returning / after-throwing / after / around(메소드 실행 전/후, 예외 발생시 등 전체)

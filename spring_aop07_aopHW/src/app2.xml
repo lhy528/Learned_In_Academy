@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+    <bean id="biz" class="spring_aop07_aopHW.WeaponImple">
+    	<property name="type" value="칼"></property>
+    </bean>
+
+    <bean id="wtc" class="spring_aop07_aopHW.WeaponTimeCheck2">
+	
+    </bean>
+
+    <aop:config>
+        <aop:aspect id="wtcAspect" ref="wtc">
+            <aop:pointcut expression="execution (public void f* (..))" id="checkPointCut"/>
+            <aop:around method="logAround" pointcut-ref="checkPointCut"/>
+        </aop:aspect>
+    
+    </aop:config>
+
+</beans>
