@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- annotaion을 이용하면 HandlerMapping 기본으로 수행해줌, 생략 가능, bean에 id가 필요 없다 -->
+<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
+	
+</bean>
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix" value="/WEB-INF/jsp/" />
+    <property name="suffix" value=".jsp" />	
+</bean>
+
+<bean class="spring_web06_controller_anno.SelectMenuController"></bean>
+
+<bean class="spring_web06_controller_anno.HelloController"></bean>
+
+
+</beans>
