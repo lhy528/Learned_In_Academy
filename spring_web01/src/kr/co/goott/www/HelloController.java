@@ -14,7 +14,13 @@ public class HelloController implements Controller{
 		// ModelAndView : Model + View
 		// Model : 전달할 데이터
 		// View : 찾아갈 view의 이름
-		return null;
+		
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("msg", "Hello Spring");
+		mav.setViewName("hello");
+		
+				return mav;
 	}
 	
 }
