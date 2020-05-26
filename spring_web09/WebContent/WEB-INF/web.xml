@@ -9,7 +9,7 @@
 			<param-name>contextConfigLocation</param-name>
 			<!-- 설정을 두개 이상 할 수도 있음 -->
             <param-value>/WEB-INF/app.xml
-                        /WEB-INF/ctx.xml
+                        /WEB-INF/ctx.xml 
             </param-value>
             
 		</init-param>
