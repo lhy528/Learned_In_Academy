@@ -8,6 +8,11 @@
 <!-- 이름에 맞게 알아서 잘 처리할 것을 스프링에게 요청(넣어두는 것이 작업할 때 편리함) -->
 <mvc:annotation-driven/>
 
+<!-- 기본적으로 설정된 주소 외에 처리해달라고 요청해야 하는 경우가 있음
+    ex) jsp에 이미지 파일 호출
+    servlet-handler가 처리하도록 요청하면 된다 -->
+<mvc:default-servlet-handler/>
+
 <mvc:view-resolvers>
     <mvc:jsp prefix="/WEB-INF/views/" suffix=".jsp"/>
 </mvc:view-resolvers>
